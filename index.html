@@ -4,6 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ReMade Trade — Waste to Worth</title>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TPWRNNFFJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-0TPWRNNFFJ');
+
+    function trackContact(location) {
+      gtag('event', 'contact_click', {
+        'event_category': 'engagement',
+        'event_label': location
+      });
+    }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
@@ -326,7 +341,7 @@
       <li><a href="#platform">Platform</a></li>
       <li><a href="#who">Who we serve</a></li>
       <li><a href="#team">Team</a></li>
-      <li><a href="https://forms.gle/w9vxyP5pXcVpVWsG9" target="_blank" rel="noopener" class="cta-link">Contact us</a></li>
+      <li><a href="https://forms.gle/w9vxyP5pXcVpVWsG9" target="_blank" rel="noopener" class="cta-link" onclick="trackContact('nav')">Contact us</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -338,7 +353,7 @@
     <a href="#platform" onclick="closeMobile()">Platform</a>
     <a href="#who" onclick="closeMobile()">Who we serve</a>
     <a href="#team" onclick="closeMobile()">Team</a>
-    <a href="https://forms.gle/w9vxyP5pXcVpVWsG9" target="_blank" rel="noopener" class="cta-link">Contact us</a>
+    <a href="https://forms.gle/w9vxyP5pXcVpVWsG9" target="_blank" rel="noopener" class="cta-link" onclick="trackContact('mobile-nav')">Contact us</a>
   </div>
 
   <!-- HERO -->
@@ -346,7 +361,7 @@
     <div class="hero-content">
       <h1><span>An integrated platform where</span><br>waste isn't wasted</h1>
       <p class="hero-sub">ReMade Trade is a sourcing and pipeline platform that helps organizations reduce waste costs, unlock value from industrial byproducts, and access local reclaimed materials — with built-in reporting at every step.</p>
-      <a href="https://forms.gle/w9vxyP5pXcVpVWsG9" target="_blank" rel="noopener" class="hero-cta">Let's connect</a>
+      <a href="https://forms.gle/w9vxyP5pXcVpVWsG9" target="_blank" rel="noopener" class="hero-cta" onclick="trackContact('hero')">Let's connect</a>
     </div>
   </section>
 
@@ -584,7 +599,7 @@
       <div class="contact-left">
         <h2>Get in touch</h2>
         <p>Whether you're generating industrial waste, sourcing reclaimed materials, or want to learn more — we'd like to hear from you.</p>
-        <a href="https://forms.gle/w9vxyP5pXcVpVWsG9" target="_blank" rel="noopener" class="contact-btn">Contact Us</a>
+        <a href="https://forms.gle/w9vxyP5pXcVpVWsG9" target="_blank" rel="noopener" class="contact-btn" onclick="trackContact('contact-section')">Contact Us</a>
       </div>
       <div class="contact-right">
         <img src="ReMade_Logo.png" alt="" aria-hidden="true" />
